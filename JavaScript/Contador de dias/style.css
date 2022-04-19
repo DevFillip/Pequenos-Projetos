@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(255, 148, 72);
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+.container{
+    width: 800px;
+    height: 250px;
+    background-color: #333;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.container div{
+    display: flex;
+}
+
+.container-div{
+    font-size: 50px;
+    color: white;
+    border-radius: 20px;
+}
+
+.container-div div{
+    margin-top: 80px;
+    padding: 20px 20px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.contador-ano{
+    background-color:rgb(255, 205, 22);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+
+footer{
+    height: 40px;
+    margin: 0;
+    background-color:  rgb(255, 128, 31);
+    text-align: center;
+    margin-top: 160px;
+    color: white;
+}
+
+footer p{
+    font-size: 23px;
+    padding: 5px 8px;
+}
