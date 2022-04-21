@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: #333;
+}
+
+h1{
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+section{
+    background-color: white;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.555);
+}
+
+.primeiroNumero{
+    margin: 0 auto;
+}
+
+.segundoNumero{
+    margin: 0 auto;
+}
+
+
+input[type="number"]{
+    width: 140px;
+    padding: 15px 20px;
+    font-size: 30px;
+   border-radius: 15px;
+   border:none;
+   border: 1px solid #ccc;
+   outline: none;
+
+}
+
+.operador{
+    margin-left: -50px;
+    margin-right: -50px;
+}
+.operador select{
+    
+    font-size: 22px;
+    padding: 5px 5px;
+    margin-top: 16px;
+    width: 70px;
+    border-radius: 15px;
+   border:none;
+   border: 1px solid #ccc;
+   outline: none;
+}
