@@ -20,11 +20,14 @@ section{
     background-color: white;
     width: 600px;
     margin: 0 auto;
-    margin-top: 100px;
-    display: flex;
+    margin-top: 50px;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.555);
+}
+
+.containerCalculo{
+    display: flex;
 }
 
 .primeiroNumero{
@@ -51,14 +54,37 @@ input[type="number"]{
     margin-left: -50px;
     margin-right: -50px;
 }
+
 .operador select{
-    
-    font-size: 22px;
+    font-size: 15px;
     padding: 5px 5px;
     margin-top: 16px;
-    width: 70px;
+    width: 60px;
+    height: 40px;
     border-radius: 15px;
-   border:none;
-   border: 1px solid #ccc;
-   outline: none;
+    border:none;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+
+
+.botaoCalculo{
+    text-align: center;
+}
+button[type="submit"]{
+    padding: 4px 8px;
+    font-size: 15px;
+    margin-top: 10px;
+    background-color: rgb(122, 255, 27);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+
+
+}
+
+.resultadoDaConta{
+    margin-top: 10px;
+    text-align: center;;
 }

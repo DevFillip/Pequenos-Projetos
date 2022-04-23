@@ -10,22 +10,33 @@
 <body>
     <h1>Calculadora</h1>
     <section class="container">
-        <div class="primeiroNumero">
-            <input type="number" name="" id="">
+        <div class="containerCalculo">
+            <div class="primeiroNumero">
+                <input type="number" name="" id="primeiroNumero">
+            </div>
+
+            <div class="operador">
+               <select name="" id="lista" >
+                   <option value="+">+</option>
+                   <option value="-">-</option>
+                   <option value="/">/</option>
+                   <option value="*">*</option>
+                   <option value="%">%</option>
+               </select>
+            </div>
+
+            <div class="segundoNumero"> 
+                <input type="number" name="" id="segundoNumero">
+            </div>
         </div>
 
-        <div class="operador">
-            <select name="" id="">
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="/">/</option>
-                <option value="*">*</option>
-            </select>
+        <div class="botaoCalculo">
+            <button type="submit">Calcular</button>
         </div>
 
-        <div class="segundoNumero">
-            <input type="number" name="" id="">
-        </div>
+        
+            <div class="resultadoDaConta">O resultado é:</div>
+
     </section>
     
     <script src="script.js"></script>
