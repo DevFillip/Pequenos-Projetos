@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section{
+    background-color: rgb(244, 244, 244);
+    min-width: 500px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 120px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.326);
+}
+
+.add-itens{
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.add-itens h2{
+    font-size: 36px;
+    margin-top: 60px;
+    color: rgb(32, 32, 32);
+}
+
+.add-itens input{
+    margin-top: 30px;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    border: 1px solid #ccc;
+}
+
+input[type="number"]{
+    width: 90px;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    background-color: rgb(41, 255, 41);
+    color: white;
+    width:80px;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.tag-itens{
+    display: flex;
+    margin-top: 30px;
+    width: 90%;
+    margin: 0 auto;
+    margin-left: 45px;
+    
+}
+
+.tag-itens h3:nth-of-type(2){
+    margin-left: 114px;
+}
+
+
+
+.itens-adicionados{
+    color: #333;
+    background-color: rgb(231, 231, 231);
+    width: 90%;
+    margin: 0 auto ;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-top: 2px;
+}
+
+.adicionados{
+    display: flex;
+    justify-content:space-between;
+}
+
+.adicionados h3{
+    padding: 10px 10px;
+}
+
+
+.botoes img{
+    max-width: 41px;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.botoes img:nth-of-type(2){
+    padding: 2px;
+    margin-right: 5px;
+
+}
+
+.limpar{
+    margin: 0 auto;
+    color: rgba(255, 42, 42, 0.862);
+    margin-top: 60px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    width: 20%;
+}
+
+.total{
+        display: flex;
+        margin-top: 30px;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: 45px;
+}
+
+.total h3:nth-of-type(2){
+    margin-left: 114px;
+}

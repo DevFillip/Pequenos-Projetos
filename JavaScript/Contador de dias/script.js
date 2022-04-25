@@ -9,7 +9,7 @@ function dataAtual(){
     var mes = formatandoData(data.getMonth() + 1)
     var dia = formatandoData(data.getDate())
 
-    contadorAno.innerHTML = ` ${ano}/${mes}/${dia}`
+    contadorAno.innerHTML = ` ${dia}/${mes}/${ano}`
 }
 
 function formatandoData(tempo){
