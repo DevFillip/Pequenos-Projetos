@@ -61,25 +61,26 @@ input[type="submit"]{
     margin-left: 114px;
 }
 
-
-
-.itens-adicionados{
-    color: #333;
-    background-color: rgb(231, 231, 231);
-    width: 90%;
-    margin: 0 auto ;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    margin-top: 2px;
-}
-
 .adicionados{
     display: flex;
     justify-content:space-between;
+    color: #333;
+    width: 90%;
+    margin: 0 auto ;
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 2px; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.51);
+    border: 1px solid #ccc;
 }
 
 .adicionados h3{
     padding: 10px 10px;
+}
+
+.adicionados h3:nth-of-type(1){
+    width: 30%;
 }
 
 
@@ -112,6 +113,7 @@ input[type="submit"]{
         margin-left: 45px;
 }
 
-.total h3:nth-of-type(2){
-    margin-left: 114px;
+.total h3:nth-of-type(1){
+    width: 40%;
+
 }

@@ -13,7 +13,7 @@
         <div class="add-itens">
             <h2>Lista de compras</h2>
             <input type="text" name="" id="itensNovos">
-            <input type="number" name="" id="itensNovosValor">
+            <input type="number" name="" id="itensPreco">
             <input type="submit" value="Salvar" id="salvar">
         </div>
 
@@ -22,17 +22,23 @@
                 <h3>Valor do item</h3>
         </div> <!--tag-itens-->
 
+      
         <div class="itens-adicionados">
             <div class="adicionados">
+                <h3></h3>   
+                <h3>R$</h3>
+                <div class="botoes"> 
+                    <img src="/JavaScript/Lista de compras/img/edit.png" alt="">
+                    <img src="/JavaScript/Lista de compras/img/delete.png" alt="">
+                </div>
             </div>
         </div>
+     
 
         <div class="total">
-            <h3>Total de itens:</h3>
-            <h3>Valor Total</h3>
         </div>
 
-        <div class="limpar">
+        <div class="limpar" onclick="limpar()">
             <h3>Limpar itens</h3>
         </div>
     </section><!--container-->
