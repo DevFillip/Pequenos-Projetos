@@ -7,7 +7,6 @@ const total = document.querySelector('.total')
 botaoSalvar.addEventListener('click', adicionar)
 
 var itens = []
-excluirItem() 
 
 function adicionar(){
    
@@ -30,7 +29,7 @@ function adicionar(){
             <h3>`+val.preco+`</h3>
             <div class="botoes"> 
             <img src="/JavaScript/Lista de compras/img/edit.png" alt="">
-            <img src="/JavaScript/Lista de compras/img/delete.png" alt="" name="delete">
+            <img src="/JavaScript/Lista de compras/img/delete.png" alt="" onclick="excluirItem()" name="delete">
             </div>
         </div>
 
@@ -47,7 +46,7 @@ function adicionar(){
 }
 
 function excluirItem(){
-
+    console.log(itens.length)
         
 }
 
