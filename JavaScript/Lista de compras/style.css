@@ -63,7 +63,6 @@ input[type="submit"]{
 
 .adicionados{
     display: flex;
-    justify-content:space-between;
     color: #333;
     width: 90%;
     margin: 0 auto ;
@@ -80,7 +79,7 @@ input[type="submit"]{
 }
 
 .adicionados h3:nth-of-type(1){
-    width: 30%;
+    width: 53%;
 }
 
 

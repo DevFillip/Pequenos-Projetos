@@ -10,7 +10,6 @@ var itens = []
 
 function adicionar(){
    
-
     itens.push({
         nome: addItens.value,
         preco: addPreco.value
@@ -27,10 +26,6 @@ function adicionar(){
         <div class="adicionados">
             <h3>`+val.nome+`</h3>   
             <h3>`+val.preco+`</h3>
-            <div class="botoes"> 
-            <img src="/JavaScript/Lista de compras/img/edit.png" alt="">
-            <img src="/JavaScript/Lista de compras/img/delete.png" alt="" onclick="excluirItem()" name="delete">
-            </div>
         </div>
 
   ` 
@@ -55,9 +50,6 @@ function limpar(){
     <div class="adicionados">
         <h3></h3>   
         <h3>R$</h3>
-    <div class="botoes"> 
-        <img src="/JavaScript/Lista de compras/img/edit.png" alt="">
-        <img src="/JavaScript/Lista de compras/img/delete.png" alt="">
     </div>`
     itens = []
 
