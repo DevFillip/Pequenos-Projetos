@@ -24,11 +24,7 @@ function finalizar(){
                 }
             labelCerta.classList.add('show2')
 
-            var teste = document.createElement('div')
-            
-            var teste2 = 
 
-            teste.appendChild()
 
             
         }
