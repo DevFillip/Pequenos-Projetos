@@ -58,3 +58,41 @@
     opacity: 0.6;
     text-align: center;
 }
+
+.finalizar{
+    margin: 0 auto;
+    width: 70px;
+}
+
+input[type="submit"]{
+    padding: 6px 9px;
+    margin-top: 30px;
+    background-color: rgb(0, 197, 13);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.369);
+    font-size: 20px;
+    cursor: pointer;
+}   
+
+.show{
+    background-color: red;
+ 
+}
+
+.show2{
+    background-color: rgb(0, 202, 0);
+}
+
+.feedback-resposta{
+    background-color:rgba(0, 255, 0, 0.699) ;
+    width: 600px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    margin-bottom: -10px;
+    margin-top: 5px;
+    color: black;
+}

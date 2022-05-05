@@ -7,7 +7,7 @@ const resultado = document.querySelector('.res')
 function calcular(){
     // Valor de cada input, já usando o Number para validar.
     let pesoValor = Number(peso.value)
-    let alturaValor = parseFloat(altura.value)
+    let alturaValor = parseFloat(altura.value)  
 
     // Validando se algum das caixas de input estão vazias, caso estejam, não será possivel contiuar o calculo.
     if(peso.value.length == 0 || altura.value.length == 0){
