@@ -74,6 +74,7 @@ input[type="submit"]{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.369);
     font-size: 20px;
     cursor: pointer;
+    margin-bottom: 100px;
 }   
 
 .show{
@@ -92,7 +93,55 @@ input[type="submit"]{
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0 auto;
-    margin-bottom: -10px;
+    margin-bottom: 15px;
     margin-top: 5px;
+    color: black;
+}
+
+.div-1{
+    background-color:rgba(255, 0, 0, 0.742) ;
+    width: 600px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    color: black;
+}
+
+.div-2{
+    background-color:rgba(255, 0, 0, 0.742) ;
+    width: 600px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    color: black;
+}
+
+.div-3{
+    background-color:rgba(255, 0, 0, 0.742) ;
+    width: 600px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    color: black;
+}
+
+.div-4{
+    background-color:rgba(255, 0, 0, 0.742) ;
+    width: 600px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
     color: black;
 }
