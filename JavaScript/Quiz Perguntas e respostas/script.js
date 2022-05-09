@@ -16,10 +16,19 @@ function finalizar(){
             }
 
             labelCerta.classList.add('show2')
+
+            var elemento = document.createElement('div')
+            var p = document.createElement('p')
+            p.innerText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. LaborumLorem ipsum dolor sit amet consectetur, adipisicing elit. LaborumLorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum"
+
+
+            elemento.appendChild(p)
+
+            document.body.append(elemento)
         }
         else
         {
-            for( var label of labels){
+            for(var label of labels){
                 label.classList.add('show')
                 }
             labelCerta.classList.add('show2')
