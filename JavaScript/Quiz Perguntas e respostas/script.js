@@ -16,56 +16,48 @@ var contato1 = document.querySelector('.contato1')
 
         // Elementos criados como feedback para cada questão //
 
-// Primeira pergunta 
-var div = document.createElement('div') 
-var div1 = document.createElement('div') 
-var div2 = document.createElement('div') 
-var div3 = document.createElement('div')
-var div4 = document.createElement('div') 
-// p´s
-var p = document.createElement('p') 
-var p1 = document.createElement('p')
-var p2 = document.createElement('p')
-var p3 = document.createElement('p')
-var p4 = document.createElement('p')
-// Classes pro CSS
-div.classList.add('div-1') 
-div1.classList.add('div-2')
-div2.classList.add('div-3')
-div3.classList.add('div-4')
-div4.classList.add('div-5')
+var divErrada = []
 
+    for(let i = 0; i < 8; i++)
+    {
+        divErrada[i] = document.createElement('div')
+        divErrada[i].classList.add('div-errada')
+    }
 
-// Cópia para a pergunta 2, e assim seguiria se tivesse mais perguntas
-var div5 = document.createElement('div') 
-var div6 = document.createElement('div') 
-var div7 = document.createElement('div') 
-var div8 = document.createElement('div') 
-var div9 = document.createElement('div') 
-// p´s
-var p5 = document.createElement('p')
-var p6 = document.createElement('p')
-var p7 = document.createElement('p')
-var p8 = document.createElement('p')
-var p9 = document.createElement('p')
-// Classes
-div5.classList.add('div-6')
-div6.classList.add('div-7')
-div7.classList.add('div-8')
-div8.classList.add('div-9')
-div9.classList.add('div-10')
+var divCerta = []
 
+    for(let i = 0; i < 2; i++)
+    {
+        divCerta[i] = document.createElement('div')
+        divCerta[i].classList.add('div-certa')
+    }
+
+var p = []
+
+    for(let i = 0; i < 10; i++)
+    {
+        p[i] = document.createElement('p')
+        p[i].classList.add('p-estilo')
+    }
 
             // Função de click no finalizar o quiz //
 function finalizar()
 { 
+        // Loops pra mostrar as cores vermelhas das perguntas erradas //
+        for(var label of labelsVDD){
+            label.classList.add('show') 
+            }
+             // Deixando verde...
+        labelsVDD[1].classList.add('show2')
+        labelsVDD[7].classList.add('show2')  
 
         // Chamando os inputs e verificando se estão clicados // 
     var inputsPergunta = document.querySelector('.input-pergunta:checked')
     var inputsPergunta1 = document.querySelector('.input-pergunta1:checked')
     
-                // PRIMEIRA QUESTÃO DO CÓD //   
 
+                // PRIMEIRA QUESTÃO DO CÓD //  
+                
         // Verificando se tem algum input que não está clicado //
     if(inputsPergunta == null || inputsPergunta1 == null)
     { 
@@ -78,128 +70,52 @@ function finalizar()
         // Verificando se o input tem o valor errado de cada input //
         if(inputsPergunta.value ==  'errado' || inputsPergunta.value ==  'errado1' || inputsPergunta.value ==  'errado2' || inputsPergunta.value ==  'errado3')
         { 
-// Veio pra cá, significa que foi errada, então adiciona mais 1 questão. 
+        // Veio pra cá, significa que foi errada, então adiciona apenas mais 1 questão. 
             questoes += 1
 
+        // Aqui é a resposta certa, que como tem o mesmo padrão de escrita para todas as perguntas erradas, eu deixei ela aqui, e não uma em cada resposta errada //
+            // Label 1, insere a div antes de label 2
+            labelsVDD[0].parentNode.insertBefore(divErrada[0], labelsVDD[1]) 
+            // põe o p dentro da div
+            divErrada[0].append(p[0]) 
+            // adiciona o texto do porque está errado
+            p[0].innerText = `Essa resposta está errada porque a função parseToReal() não existe em JS.`
 
-        // Loops pra mostrar as cores vermelhas das perguntas erradas //
-            for(var label of labelsVDD)
-            { 
-                label.classList.add('show')
-            }   
-            // As duas labels certas, ou seja, verdes //
-            labelsVDD[1].classList.add('show2')
-            labelsVDD[7].classList.add('show2') 
-       
+            labelsVDD[1].parentNode.insertBefore(divCerta[0], labelsVDD[2])
+            divCerta[0].append(p[4])
+            p[4].innerText = `Essa era a resposta certa porque é assim que é convertido números para qualquer moeda como o Real, ela localiza o idioma,depois diz que é do estilo moeda, e diz qual moeda é, no caso 'BRL'`
 
-            // Agora vai em cada uma das erradas e verifica //
+            labelsVDD[2].parentNode.insertBefore(divErrada[1], labelsVDD[3])
+            divErrada[1].append(p[1])
+            p[1].innerText = `Essa resposta está errada porque o toFixed() é para determinar as casas depois do ponto de um float, como toFixed(2)`
+            
+            labelsVDD[3].parentNode.insertBefore(divErrada[2], labelsVDD[4])
+            divErrada[2].append(p[2])
+            p[2].innerText = `Essa resposta está errada porque o toFixed() é para determinar as casas depois do ponto de um float, como toFixed(2)`
+
+            labelsVDD[4].parentNode.insertBefore(divErrada[3], contato)
+            divErrada[3].append(p[3])
+            p[3].innerText = `Essa resposta está errada porque a função  parseToReal não existe no JS.`
+
+                // Agora vai em cada uma das erradas e muda apenas o começo, para a pessoa saber qual ela clicou depois. //
 
             if(inputsPergunta.value == 'errado')
             { 
-
-            // Aqui ocorre o mesmo padrão para todas as questões //
-
-                // Label 1, insere a div antes de label 2
-                labelsVDD[0].parentNode.insertBefore(div, labelsVDD[1]) 
-                // põe o p dentro da div
-                div.append(p) 
-                // adiciona o texto do porque está errada
-                p.innerText = `Você errou!`
-
-
-                // Assim segue para todos as outras questões //
-
-                labelsVDD[2].parentNode.insertBefore(div1, labelsVDD[3])
-                div1.append(p1)
-                p1.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[3].parentNode.insertBefore(div2, labelsVDD[4])
-                div2.append(p2)
-                p2.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[4].parentNode.insertBefore(div3, contato)
-                div3.append(p3)
-                p3.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[1].parentNode.insertBefore(div4, labelsVDD[2])
-                div4.append(p4)
-                
-                p4.innerText = `Essa era a resposta certa, porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
+                p[0].innerText = `Você errou! Essa resposta está errada porque a função parseToReal() não existe em JS.`
             }
 
             else if(inputsPergunta.value == 'errado1')
             {
-                labelsVDD[0].parentNode.insertBefore(div, labelsVDD[1])
-                div.append(p)
-                p.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[2].parentNode.insertBefore(div1, labelsVDD[3])
-                div1.append(p1)
-                p1.innerText = `Você errou!`
-
-                labelsVDD[3].parentNode.insertBefore(div2, labelsVDD[4])
-                div2.append(p2)
-                p2.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[4].parentNode.insertBefore(div3, contato)
-                div3.append(p3)
-                p3.innerText = `Essa também não está certa por causa disso disso e disso...`
-    
-                labelsVDD[1].parentNode.insertBefore(div4, labelsVDD[2])
-                div4.append(p4)
-                p4.innerText = `Essa era a resposta certa, porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
-
-                
+                p[1].innerText = `Você errou! essa resposta está errada porque o toFixed() é para determinar as casas depois do ponto de um float, como toFixed(2)`     
             }
 
             else if(inputsPergunta.value == 'errado2'){
-    
-                labelsVDD[0].parentNode.insertBefore(div, labelsVDD[1])
-                div.append(p)
-                p.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[2].parentNode.insertBefore(div1, labelsVDD[3])
-                div1.append(p1)
-                p1.innerText = ` Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[3].parentNode.insertBefore(div2, labelsVDD[4])
-                div2.append(p2)
-                p2.innerText = `Você errou!`
-
-                labelsVDD[4].parentNode.insertBefore(div3, contato)
-                div3.append(p3)
-                p3.innerText = `Essa também não está certa por causa disso disso e disso...`
-    
-                labelsVDD[1].parentNode.insertBefore(div4, labelsVDD[2])
-                div4.append(p4)
-                p4.innerText = `Essa era a resposta certa, porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
-
-                
+                p[2].innerText = `Você errou! essa resposta está errada porque o toFixed() é para determinar as casas depois do ponto de um float, como toFixed(2)`       
             }
 
             else if(inputsPergunta.value == 'errado3')
             {
-                labelsVDD[0].parentNode.insertBefore(div, labelsVDD[1])
-                div.append(p)
-                p.innerText = `Essa resposta é errada por causa disso disso e disso...`
-
-                labelsVDD[2].parentNode.insertBefore(div1, labelsVDD[3])
-                div1.append(p1)
-                p1.innerText = `Essa resposta é errada por causa disso disso e disso...`
-
-                labelsVDD[3].parentNode.insertBefore(div2, labelsVDD[4])
-                div2.append(p2)
-                p2.innerText = `Essa resposta é errada por causa disso disso e disso...`
-
-                labelsVDD[4].parentNode.insertBefore(div3, contato)
-                div3.append(p3)
-                p3.innerText = `Você errouuuuuu!.`
-    
-                labelsVDD[1].parentNode.insertBefore(div4, labelsVDD[2])
-                div4.append(p4)
-                p4.innerText = `Essa era a resposta certa, porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
-
-   
+                p[3].innerText = `Você errou! essa resposta está errada porque a função  parseToReal não existe no JS.`
             }
             
         }
@@ -207,152 +123,78 @@ function finalizar()
         // Se não tem o valor errado, o cód vem pra cá //
 
         else
-        {
-            // refazendo o loop que deixa vermelho os errados //
-
-            for(var label of labelsVDD){
-                label.classList.add('show') 
-                }
-                // Deixando verde...
-                labelsVDD[1].classList.add('show2')
-                labelsVDD[7].classList.add('show2')    
-
+        {  
                 // aumentando em 1 o número de questões
                 questoes += 1
                 // e agora sim somando 1 o número de acertos.
                 acertos += 1
 
-                          // Mesma coisa... //
-
-                labelsVDD[0].parentNode.insertBefore(div, labelsVDD[1])
-                div.append(p)
-                p.innerText = `Essa resposta é errada por causa disso disso e disso...`
-
-                labelsVDD[2].parentNode.insertBefore(div1, labelsVDD[3])
-                div1.append(p1)
-                p1.innerText = `Essa resposta é errada por causa disso disso e disso...`
-
-                labelsVDD[3].parentNode.insertBefore(div2, labelsVDD[4])
-                div2.append(p2)
-                p2.innerText = `Essa resposta é errada por causa disso disso e disso...`
-
-                labelsVDD[4].parentNode.insertBefore(div3, contato)
-                div3.append(p3)
-                p3.innerText = `Essa resposta é errada por causa disso disso e disso...`
-
-                labelsVDD[1].parentNode.insertBefore(div4, labelsVDD[2])
-                div4.append(p4)
-                p4.innerText = `Parabéns você acertou!, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
+                             // Mesma coisa... //
+                labelsVDD[0].parentNode.insertBefore(divErrada[0], labelsVDD[1]) 
+                divErrada[0].append(p[0]) 
+                p[0].innerText = `Essa resposta está errada porque a função parseToReal() não existe em JS.`
+          
+                labelsVDD[2].parentNode.insertBefore(divErrada[1], labelsVDD[3])
+                divErrada[1].append(p[1])
+                p[1].innerText = `Essa resposta está errada porque o toFixed() é para determinar as casas depois do ponto de um float, como toFixed(2)`
+          
+                labelsVDD[3].parentNode.insertBefore(divErrada[2], labelsVDD[4])
+                divErrada[2].append(p[2])
+                p[2].innerText = `Essa resposta está errada porque o toFixed() é para determinar as casas depois do ponto de um float, como toFixed(2)`
+          
+                labelsVDD[4].parentNode.insertBefore(divErrada[3], contato)
+                divErrada[3].append(p[3])
+                p[3].innerText = `Essa resposta está errada porque a função parseToReal() não existe no JS.`
+          
+                labelsVDD[1].parentNode.insertBefore(divCerta[0], labelsVDD[2])
+                divCerta[0].append(p[4])
+                p[4].innerText = `Parabéns você acertou! Essa é a resposta certa porque é assim que é convertido números para qualquer moeda como o Real, ela localiza o idioma,depois diz que é do estilo moeda, e diz qual moeda é, no caso 'BRL'`
                 }
 
-                // SEGUNDA QUESTÃO DO QUIZ ||
+                        // SEGUNDA QUESTÃO DO QUIZ ||
 
-         // Verificando novamente se estão com os valores errados //
-
+                            // Mesmo padrão //
         if(inputsPergunta1.value ==  'errado4' || inputsPergunta1.value ==  'errado5' || inputsPergunta1.value ==  'errado6' || inputsPergunta1.value ==  'errado7')
         {
-            // aumentando apenas 1 questão caso seja errado 
             questoes += 1
+
+            labelsVDD[5].parentNode.insertBefore(divErrada[4], labelsVDD[6]) 
+            divErrada[4].append(p[5]) 
+            p[5].innerText = `Essa resposta está errada porque o getElementByID() chama apenas o ID, e a div não possui um ID definido.`
+
+            labelsVDD[6].parentNode.insertBefore(divErrada[5], labelsVDD[7]) 
+            divErrada[5].append(p[6]) 
+            p[6].innerText = `Essa resposta está errada porque o document.querySelector(div#texto) chama a div, e depois chama o ID da div com o # assim como no CSS, e essa Div não possui um ID e sim uma classe.`
+
+            labelsVDD[7].parentNode.insertBefore(divCerta[1], labelsVDD[8])
+            divCerta[1].append(p[7])
+            p[7].innerText = `Essa era a resposta certa, porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
+
+            labelsVDD[8].parentNode.insertBefore(divErrada[6], labelsVDD[9]) 
+            divErrada[6].append(p[8]) 
+            p[8].innerText = `Essa resposta está errada porque o getElementByID() chama apenas os Ids dos elementos, e essa div não possui nenhum Id.`
+
+            labelsVDD[9].parentNode.insertBefore(divErrada[7], contato1) 
+            divErrada[7].append(p[9]) 
+            p[9].innerText = `Você errou! essa resposta está errada porque o document.getElementByName() puxa o nome do elemento, e a div não possui isso.`
     
-                            // Mesmo padrão //
+                                
             if(inputsPergunta1.value == 'errado4')
             { 
-                            // Mesmo padrão //
-                labelsVDD[5].parentNode.insertBefore(div5, labelsVDD[6]) 
-                div5.append(p5) 
-                p5.innerText = `a Você errou!!!`
-
-                labelsVDD[6].parentNode.insertBefore(div6, labelsVDD[7])
-                div6.append(p6)
-                p6.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[7].parentNode.insertBefore(div7, labelsVDD[8])
-                div7.append(p7)
-                p7.innerText = `Essa era a resposta certa, porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
-
-                labelsVDD[8].parentNode.insertBefore(div8, labelsVDD[9])
-                div8.append(p8)
-                p8.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[9].parentNode.insertBefore(div9, contato1)
-                div9.append(p9)
-                p9.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                
+                p[5].innerText = `Você errou! essa resposta está errada porque o getElementByID() chama apenas o ID, e a div não possui um ID definido.`
             }
 
             else if(inputsPergunta1.value == 'errado5')
-            { // Se for o errado 1, vai acontecer isso...
-    
-                labelsVDD[5].parentNode.insertBefore(div5, labelsVDD[6]) 
-                div5.append(p5) // chamando a label 1, e inserindo a div antes da label 2
-                p5.innerText = `Essa também não está certa por causa disso disso e disso...`// e esse texto, segue igual para todas as outras...
-
-                labelsVDD[6].parentNode.insertBefore(div6, labelsVDD[7])
-                div6.append(p6)
-                p6.innerText = `a Você errou`
-
-                labelsVDD[7].parentNode.insertBefore(div7, labelsVDD[8])
-                div7.append(p7)
-                p7.innerText = `Essa era a resposta certa, porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
-
-                labelsVDD[8].parentNode.insertBefore(div8, labelsVDD[9])
-                div8.append(p8)
-                p8.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[9].parentNode.insertBefore(div9, contato1)
-                div9.append(p9)
-                p9.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                
+            {
+                p[6].innerText = `Você errou! essa resposta está errada porque o document.querySelector(div#texto) chama a div, e depois chama o ID da div com o # assim como no CSS, e essa Div não possui um ID e sim uma classe.`
             }
 
             else if(inputsPergunta1.value == 'errado6'){
-    
-                labelsVDD[5].parentNode.insertBefore(div5, labelsVDD[6]) 
-                div5.append(p5) // chamando a label 1, e inserindo a div antes da label 2
-                p5.innerText = `Essa também não está certa por causa disso disso e disso...`// e esse texto, segue igual para todas as outras...
-
-                labelsVDD[6].parentNode.insertBefore(div6, labelsVDD[7])
-                div6.append(p6)
-                p6.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[7].parentNode.insertBefore(div7, labelsVDD[8])
-                div7.append(p7)
-                p7.innerText = `Essa era a resposta certa, porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
-
-                labelsVDD[8].parentNode.insertBefore(div8, labelsVDD[9])
-                div8.append(p8)
-                p8.innerText = `Você errou!`
-
-                labelsVDD[9].parentNode.insertBefore(div9, contato1)
-                div9.append(p9)
-                p9.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                
+                p[8].innerText = `Você errou! Essa resposta está errada porque o getElementByID() chama apenas os Ids dos elementos, e essa div não possui nenhum Id.`   
             }
 
-            else if(inputsPergunta1.value == 'errado7')
-            {
-                labelsVDD[5].parentNode.insertBefore(div5, labelsVDD[6]) 
-                div5.append(p5) // chamando a label 1, e inserindo a div antes da label 2
-                p5.innerText = `Essa também não está certa por causa disso disso e disso...`// e esse texto, segue igual para todas as outras...
-
-                labelsVDD[6].parentNode.insertBefore(div6, labelsVDD[7])
-                div6.append(p6)
-                p6.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[7].parentNode.insertBefore(div7, labelsVDD[8])
-                div7.append(p7)
-                p7.innerText = `Essa era a resposta certa, porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
-
-                labelsVDD[8].parentNode.insertBefore(div8, labelsVDD[9])
-                div8.append(p8)
-                p8.innerText = `Essa também não está certa por causa disso disso e disso...`
-
-                labelsVDD[9].parentNode.insertBefore(div9, contato1)
-                div9.append(p9)
-                p9.innerText = `Você errou!!`            
+            else if(inputsPergunta1.value == 'errado7'){
+                p[9].innerText = `Você errou! essa resposta está errada porque o document.getElementByName() puxa o nome do elemento, e a div não possui isso.`   
             }
         }
 
@@ -362,30 +204,28 @@ function finalizar()
             questoes += 1
             acertos += 1
 
-                        // Mesmo padrão //
-            labelsVDD[5].parentNode.insertBefore(div5, labelsVDD[6]) 
-            div5.append(p5) // chamando a label 1, e inserindo a div antes da label 2
-            p5.innerText = `Essa resposta está errada por causa disso disso e disso..`// e esse texto, segue igual para todas as outras...
-
-            labelsVDD[6].parentNode.insertBefore(div6, labelsVDD[7])
-            div6.append(p6)
-            p6.innerText = `Essa resposta está errada por causa disso disso e disso..`
-
-            labelsVDD[7].parentNode.insertBefore(div7, labelsVDD[8])
-            div7.append(p7)
-            p7.innerText = `Parabéns você acertou! essa é a resposta certa porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
-
-            labelsVDD[8].parentNode.insertBefore(div8, labelsVDD[9])
-            div8.append(p8)
-            p8.innerText = `Essa resposta está errada por causa disso disso e disso..`
-
-            labelsVDD[9].parentNode.insertBefore(div9, contato1)
-            div9.append(p9)
-            p9.innerText = `Essa resposta está errada por causa disso disso e disso...`
+            labelsVDD[5].parentNode.insertBefore(divErrada[4], labelsVDD[6]) 
+            divErrada[4].append(p[5]) 
+            p[5].innerText = `Essa resposta está errada porque o getElementByID() chama apenas o ID, e a div não possui um ID definido`
+                    
+            labelsVDD[6].parentNode.insertBefore(divErrada[5], labelsVDD[7]) 
+            divErrada[5].append(p[6]) 
+            p[6].innerText = `Essa resposta está errada porque o document.querySelector(div#texto) chama a div, e depois chama o ID da div com o # assim como no CSS, e essa Div não possui um ID e sim uma classe.`
+                    
+            labelsVDD[7].parentNode.insertBefore(divCerta[1], labelsVDD[8])
+            divCerta[1].append(p[7])
+            p[7].innerText = `Parabéns você acertou! essa era a resposta certa, porque...  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quisquam ut illum. Reprehenderit ea vero, non delectus eius voluptatum ipsum, est natus ipsam eos laborum quia maiores vel dolores aspernatur.`
+                    
+            labelsVDD[8].parentNode.insertBefore(divErrada[6], labelsVDD[9]) 
+            divErrada[6].append(p[8]) 
+            p[8].innerText = `Essa resposta está errada porque o getElementByID() chama apenas os Ids dos elementos, e essa div não possui nenhum Id.`
+                    
+            labelsVDD[9].parentNode.insertBefore(divErrada[7], contato1) 
+            divErrada[7].append(p[9]) 
+            p[9].innerText = `Essa resposta está errada porque o document.getElementByName() puxa o nome do elemento, e a div não possui isso.` 
+            
             } 
-
-
-            // No fim criamos a parte de resultado do quiz//
+                // No fim criamos a parte de resultado do quiz//
 
             // Um novo elemento que entra na div resultado-do-quiz //
             let divResultado = document.createElement('div')
@@ -395,6 +235,6 @@ function finalizar()
             
             divResultado.append(h4Resultado)
             resultado.append(divResultado)
-             }
+            }
         }
     

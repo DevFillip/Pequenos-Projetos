@@ -15,31 +15,31 @@
         </div>
 
         <div class="container-pergunta1">
-            <h3>Quem criou a internet, e o que significa www?!</h3>
+            <h4>Considerando a declaração let n = 1543.5, qual das opções a ser usada para formatar esse número no nosso formato monetário?</h4>
 
             <label for="resposta1" class="hide" id="label">
                 <input type="radio" name="resposta" id="resposta1" value="errado" class="input-pergunta">
-                A) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum </label>
+                A) n.parseToReal() </label>
                 <br>
 
             <label for="resposta2" class="hide2" id="label">
                 <input type="radio" name="resposta" id="resposta2" value="certo" class="input-pergunta">
-                    B) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum aaaaaa</label>
+                    B) n.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})</label>
                 <br>
 
             <label for="resposta3" class="hide" id="label">
                 <input type="radio" name="resposta" id="resposta3" value="errado1" class="input-pergunta">
-                C) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum </label>
+                C) n.toFixed('BRL')</label>
                 <br>
 
             <label for="resposta4" class="hide" id="label">
                 <input type="radio" name="resposta" id="resposta4" value="errado2" class="input-pergunta">
-                D) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum </label>
+                D) n.toFixed('pt-BR', {style:'currency', currency:'BRL'}) </label>
                 <br>
 
             <label for="resposta5" class="hide" id="label">
                 <input type="radio" name="resposta" id="resposta5" value="errado3" class="input-pergunta">
-                E) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum </label>
+                E) n.toLocaleString(parseToReal(currency: 'BRL')) </label>
                 <br>
             <p class="contato">@Fillip.hudson</p>
 
@@ -50,31 +50,31 @@
 
     <section class="container-perguntas">
         <div class="container-pergunta1">
-            <h3>Quem criou a internet, e o que significa www?!</h3>
+            <h4>Se temos um código HTML < div class="texto" >...< /div > e queremos acessar esse elemento via JavaScript, qual instrução devemos usar?</h4>
 
             <label for="resposta6" class="hide" id="label">
                 <input type="radio" name="resposta1" value="errado4" id="resposta6" class="input-pergunta1">
-                A) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum </label>
+                A) document.getElementById("texto") </label>
                 <br>
 
             <label for="resposta7" class="hide2" id="label">
                 <input type="radio" name="resposta1" value="errado5" id="resposta7" class="input-pergunta1">
-                    B) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum aaaaaa</label>
+                    B) document.querySelector("div#texto")</label>
                 <br>
 
             <label for="resposta8" class="hide" id="label">
                 <input type="radio" name="resposta1" value="certo1" class="input-pergunta1" id="resposta8">
-                C) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum </label>
+                C) document.querySelector("div.texto") </label>
                 <br>
 
             <label for="resposta9" class="hide" id="label">
                 <input type="radio" name="resposta1" value="errado6" class="input-pergunta1" id="resposta9">
-                D) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum </label>
+                D) document.getElementById("div") </label>
                 <br>
 
             <label for="resposta10" class="hide" id="label">
                 <input type="radio" name="resposta1" value="errado7" class="input-pergunta1" id="resposta10">
-                E) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum </label>
+                E) document.getElementByName("texto") </label>
                 <br>
             <p class="contato1">@Fillip.hudson</p>
 
@@ -89,6 +89,7 @@
         <div class="resultado-do-quiz">
         </div>
     </section>
+
 
     <script src="script.js"></script>
 </body>

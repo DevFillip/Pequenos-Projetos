@@ -86,7 +86,7 @@ input[type="submit"]{
     background-color: rgb(0, 202, 0);
 }
 
-.div-5{
+.div-certa{
     background-color:rgba(0, 255, 0, 0.699) ;
     width: 600px;
     padding-left: 10px;
@@ -98,7 +98,7 @@ input[type="submit"]{
     color: black;
 }
 
-.div-1{
+.div-errada{
     background-color:rgba(255, 0, 0, 0.742) ;
     width: 600px;
     padding-left: 10px;
@@ -107,99 +107,6 @@ input[type="submit"]{
     margin: 0 auto;
     margin-bottom: 15px;
     margin-top: 5px;
-    color: black;
-}
-
-.div-2{
-    background-color:rgba(255, 0, 0, 0.742) ;
-    width: 600px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    color: black;
-}
-
-.div-3{
-    background-color:rgba(255, 0, 0, 0.742) ;
-    width: 600px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    color: black;
-}
-
-.div-4{
-    background-color:rgba(255, 0, 0, 0.742) ;
-    width: 600px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    color: black;
-}
-
-.div-6{
-    background-color:rgba(255, 0, 0, 0.742) ;
-    width: 600px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    color: black;
-}
-
-.div-7{
-    background-color:rgba(255, 0, 0, 0.742) ;
-    width: 600px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    color: black;
-}
-.div-8{
-    background-color:rgba(0, 255, 0, 0.699) ;
-    width: 600px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    color: black;
-}
-.div-9{
-    background-color:rgba(255, 0, 0, 0.742) ;
-    width: 600px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    color: black;
-}
-.div-10{
-    background-color:rgba(255, 0, 0, 0.742) ;
-    width: 600px;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
     color: black;
 }
 
