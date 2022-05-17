@@ -110,6 +110,12 @@ input[type="submit"]{
     color: black;
 }
 
+.p-estilo{
+    font-size: 14px;
+    padding-right: 10px;
+    text-align: justify;
+}
+
 .resultado-quiz{
     width: 40%;
     border-radius: 10px;

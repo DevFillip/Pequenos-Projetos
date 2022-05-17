@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(236, 236, 236);
+}
+
+.container-navbar{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.381);
+}
+
+.meu-nome{
+    display: flex;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+.hudson{
+    margin-left: 10px;
+    color: red;
+
+}
+
+.partes-do-site{
+    display: flex;
+    padding-top: 27px;
+}
+
+.partes-do-site h2{
+    font-size: 25px;
+    color:#daa520;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.partes-do-site h2:hover{
+    color:rgb(46, 7, 184);
+    
+}
+
+.partes-do-site img{
+    display: none;
+    background-size: 100% 100%;
+    max-width: 50px;
+    cursor: pointer;
+}
+
+.redes-sociais{
+    padding-right: 20px;
+    padding-top: 16px;
+}
+
+.redes-sociais img{
+    width: 100%;
+    max-width: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+}   
+
+@media screen and (max-width:1000px) {
+    .partes-do-site{
+        margin-top: -10px;
+        padding-bottom: 15px;
+        margin-right: 25px;
+    }
+    
+    .partes-do-site img{
+        display:flex;
+        width: 100%;
+        max-width: 40px;
+        -webkit-transition: -webkit-transform .8s;
+        -ms-transition: -ms-transform .8s;
+        transition: transform .8s; 
+}
+    }
+
+    .partes-do-site img:hover{
+        transform: rotate(90deg);
+    
+    }
+
+    .partes-do-site h2{
+        display: none;
+    }
+
+    .redes-sociais{
+        display: none;
+    }
+
+   
+
+
