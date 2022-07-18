@@ -1,23 +1,37 @@
-/*
-const DIV = document.querySelector('#Pica')
+const primeiroNumero = document.querySelector('#primeiro-numero')
+const segundoNumero = document.querySelector('#segundo-numero')
+const sinalDaConta = document.querySelector('#sinal')
 
-DIV.dataset.testeMalucao = 'Olá'
+const button = document.querySelector('#calcular')
 
-DIV.dataset.setTimeTeste = 'Tempo é o caraio'
+const resultado = document.querySelector('#resultado')
 
-delete DIV.dataset.teste 
+button.addEventListener('click', calcular)
 
-console.log(DIV.dataset) */
+function calcular(){
+    let valorPrimeiroNumero = Number(primeiroNumero.value)
+    let valorSegundoNumero = Number(segundoNumero.value)
+    let valorSinalDaConta = sinalDaConta.value
 
-const buttons = document.querySelectorAll("[data-modal-id]")
+    if(valorSinalDaConta == '+'){
+      var soma = valorPrimeiroNumero + valorSegundoNumero 
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const modalId = button.dataset.modalId
-    const modal = document.getElementById(modalId)
-    modal.classList.remove("remove")
+      resultado.innerHTML = `O resultado deu ${soma.toFixed(2)}`
 
-  })
-  
-})
+    }else if(valorSinalDaConta == '-'){
+      var subtracao = valorPrimeiroNumero - valorSegundoNumero 
+      resultado.innerHTML = `O resultado deu ${subtracao.toFixed(2)}`
 
+    }else if(valorSinalDaConta == '*'){
+      var multiplicacao = valorPrimeiroNumero * valorSegundoNumero 
+      resultado.innerHTML = `O resultado deu ${multiplicacao.toFixed(2)}`
+
+    }else if(valorSinalDaConta == '/'){
+      var divisao = valorPrimeiroNumero / valorSegundoNumero 
+      resultado.innerHTML = `O resultado deu ${divisao.toFixed(2)}`
+
+    }else{
+      resultado.innerHTML = `O sinal não é válido`
+    }
+
+}

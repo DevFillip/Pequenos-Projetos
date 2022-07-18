@@ -1,3 +1,36 @@
-.remove{
-    display: none;
+.container-calculadora{
+    max-width: 500px;
+    max-height: 500px;
+    background-color: aqua;
+    padding: 20px 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 200px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.322);
+    border-radius: 3px;
+}
+
+input{
+    width: 150px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    padding: 6px 10px;
+}
+
+input[type="number"]{
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+input[type="text"]{
+    width: 50px;
+}
+
+input[type="button"]{
+    margin-top: 30px;
+    width: 120px;
+    cursor: pointer;
 }
